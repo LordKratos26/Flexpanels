@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.panels{
+    min-width: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+
+.panel{
+
+    align-items: center;
+    box-shadow: inset 0 0 0 5px (rgba(255, 255, 255, 0.1));
+    transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+    font-size: 2rem;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.panel-1 {
+    background-image: url("Cantona.jpg");
+}
+
+.panel-2 {
+    background-image: url("Beckham.jpg");
+}
+
+.panel-3 {
+    background-image: url("Giggs.jpg");
+}
+
+.panel-4 {
+    background-image: url("Scholes.jpg");
+}
+
+.panel-5 {
+    background-image: url("rooney.jpg");
+}
+
+.panel>* {
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel>*:first-child {
+    transform: translateY(-100%);
+}
+
+.panel.open-active>*:first-child {
+    transform: translateY(0);
+}
+
+.panel>*:last-child {
+    transform: translateY(100%);
+}
+
+.panel.open-active>*:last-child {
+    transform: translateY(0);
+}
+.panel.open {
+    font-size: 8rem;
+    flex: 5;
+}
+
+.legend{
+    color: goldenrod;
+    font-size: 1em;
+}
+.top{
+    color: antiquewhite;
+}
+.bot{
+    color: antiquewhite;
+}
